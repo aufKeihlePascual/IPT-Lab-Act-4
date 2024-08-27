@@ -1,0 +1,56 @@
+<diagram program="umletino" version="15.1"><zoom_level>8</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>368</x><y>24</y><w>96</w><h>88</h></coordinates><panel_attributes>Bank
+--
++code
++address
+--
++manages()
++maintains()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>608</x><y>96</y><w>96</w><h>88</h></coordinates><panel_attributes>ATM
+--
++location
++managedby
+--
++identifies()
++transactions()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>456</x><y>64</y><w>216</w><h>48</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;250;10;250;40</additional_attributes></element><element><id>UMLClass</id><coordinates><x>168</x><y>88</y><w>96</w><h>112</h></coordinates><panel_attributes>Customer
+--
++name
++address
++dob
++card number
++pin
+--
++verifyPassword()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>368</x><y>216</y><w>128</w><h>104</h></coordinates><panel_attributes>Account
+--
++number
++balance
+--
++deposit()
++widthdraw()
+createTransaction()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>208</x><y>192</y><w>176</w><h>96</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1,2
+Has</panel_attributes><additional_attributes>10;10;10;90;200;90</additional_attributes></element><element><id>Relation</id><coordinates><x>408</x><y>104</y><w>40</w><h>128</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;60;30;60;30;140</additional_attributes></element><element><id>Relation</id><coordinates><x>256</x><y>128</y><w>368</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>440;10;270;10;270;30;10;30</additional_attributes></element><element><id>UMLClass</id><coordinates><x>752</x><y>192</y><w>128</w><h>104</h></coordinates><panel_attributes>ATM Transactions
+--
++transaction id
++date
++type
++amount
++post balance
+--
++modifies()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>488</x><y>232</y><w>280</w><h>56</h></coordinates><panel_attributes>lt=-
+m1=
+m2=*
+Account Transaction</panel_attributes><additional_attributes>330;20;160;20;160;40;10;40</additional_attributes></element><element><id>UMLClass</id><coordinates><x>248</x><y>400</y><w>96</w><h>80</h></coordinates><panel_attributes>Current Account
+--
++account no.
++balance
+--
++withdraw()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>512</x><y>400</y><w>96</w><h>80</h></coordinates><panel_attributes>Saving Account
+--
++account no.
++balance
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>288</x><y>360</y><w>288</w><h>56</h></coordinates><panel_attributes>lt=-
+
+</panel_attributes><additional_attributes>10;50;10;20;340;20;340;50</additional_attributes></element><element><id>Relation</id><coordinates><x>424</x><y>312</y><w>64</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;50;60;50;60;80</additional_attributes></element><element><id>Relation</id><coordinates><x>336</x><y>424</y><w>192</w><h>48</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1
+Savings-Checking</panel_attributes><additional_attributes>10;30;120;30;120;10;220;10</additional_attributes></element></diagram>
