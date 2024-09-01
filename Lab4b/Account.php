@@ -1,15 +1,29 @@
 <?php 
 
 abstract class Account {
-    protected $accountNum;
-    protected $balance;
+    protected $accountNum, $balance;
 
-    public function __construct($initialBalance) {
-        $this -> balance = $initialBalance;
+    public function __construct($accountNum, $balance) {
+        $this -> accountNum = $accountNum;
+        $this -> balance = $balance;
     }
     
-    abstract public function withdraw($amount);
-    abstract public function deposit($amount);
+    public function withdraw($amount) {
+        if ($this-> balance >= $amount) {
+            $this-> balance -= $amount;
+        }
+        else {
+            return false;
+        }
+    }
+
+    public function deposit($amount) {
+        $this-> balance =+ $amount;  
+    }
+
+    public function createTransaction() {
+        return false;
+    }
 }
 
 ?>

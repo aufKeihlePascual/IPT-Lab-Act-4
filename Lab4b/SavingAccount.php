@@ -3,18 +3,12 @@
 require_once 'Account.php';
 
 class SavingAccount extends Account {
-    public function withdraw($amount) {
-        if ($this-> balance >= $amount) {
-            $this-> balance -= $amount;
-        }
-        else {
-            throw new Exception("Insufficient Funds");
-        }
+    public function __construct($number, $balance) {
+        parent::__construct($number, $balance);
     }
 
-    public function deposit($amount)
-    {
-        $this-> balance += $amount;
+    public function withdraw($amount) {
+        return parent::withdraw($amount);
     }
 }
 
