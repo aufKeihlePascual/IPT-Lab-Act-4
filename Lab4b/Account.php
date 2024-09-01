@@ -1,17 +1,15 @@
 <?php 
 
-class Account {
+abstract class Account {
     protected $accountNum;
     protected $balance;
 
-    public function __construct($accountNum, $initialBalance) {
-        $this -> accountNum = $accountNum;
+    public function __construct($initialBalance) {
         $this -> balance = $initialBalance;
     }
     
-    public function getAccountNum() {
-        return false;
-    }
+    abstract public function withdraw($amount);
+    abstract public function deposit($amount);
 }
 
 ?>
