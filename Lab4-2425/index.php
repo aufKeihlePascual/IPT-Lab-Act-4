@@ -10,8 +10,11 @@ $profile = new Profile(
 
 $profile->setEmail('juan@delacruz.ph');
 $profile->setAddress('Barangay Mintal, Davao City, Philippines 8000');
+$profile->setFavoriteQuote('Even the smallest person can change the course of the future.');
 
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,8 +26,8 @@ $profile->setAddress('Barangay Mintal, Davao City, Philippines 8000');
     <h1><?php echo $profile->getCompleteName(); ?></h1>
     <h2><?php echo $profile->getEmail();?></h2>
     <h2><?php echo $profile->getAddress();?></h2>
-    <p>
+    <blockquote>
         <?php echo $profile->getFavoriteQuote(); ?>
-    </p>
+    </blockquote>
 </body>
 </html>
